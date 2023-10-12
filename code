@@ -1,0 +1,21 @@
+Visual Studio 실행
+
+도구 → 명령줄 → 개발자 명령프롬프트 실행
+
+개발자 프롬프트에
+
+notepad main.c //노트패드로 main.c작성
+#include <stdio.h>
+int main(){
+  printf("%d\n", add(22,33));
+}
+
+notepad add.c //노트패드로 add.c작성
+int add(int a, int b){
+return(a+b);
+}
+
+link main add.obj //링커를 이용하여 두 개의 목적 파일(main.obj, add.obj)을 링크하여 실행 파일을 생성
+lib /OUT:mymath.lib main.obj add.obj //main.obj와 add.obj 두 개의 파일을 결합하여 mymath.lib라는 라이브러리 파일을 생성
+link main mymath.lib //링커를 사용하여 목적 파일(main.obj)과 라이브러리 파일(mymath.lib)을 링크하여 실행 파일을 생성
+main //실행파일 호출

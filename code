@@ -18,4 +18,4 @@ return(a+b);
 link main add.obj //링커를 이용하여 두 개의 목적 파일(main.obj, add.obj)을 링크하여 실행 파일을 생성
 lib /OUT:mymath.lib main.obj add.obj //main.obj와 add.obj 두 개의 파일을 결합하여 mymath.lib라는 라이브러리 파일을 생성
 link main mymath.lib //링커를 사용하여 목적 파일(main.obj)과 라이브러리 파일(mymath.lib)을 링크하여 실행 파일을 생성
-main //실행파일 호출
+main //실행파일 호출 (여기서는 결과값인 55가 출력됨)
